@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/new_nav"
+    app:startDestination="@id/fragmentBlank">
+
+    <fragment
+        android:id="@+id/fragmentBlank"
+        android:name="com.example.kotlinwithdagger.fragments.MainFragment"
+        android:label="fragment_blank">
+
+        <action
+            android:id="@+id/action_newsFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.kotlinwithdagger.fragments.DetailsFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_details">
+
+        <argument
+            android:name="ID"
+            app:argType="integer" />
+    </fragment>
+</navigation>
